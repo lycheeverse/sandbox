@@ -5,3 +5,4 @@ A few test links:
 
 * https://example.com
 * https://example.com/doesnotexist
+* https://endler.dev/asdfjaskjdf
