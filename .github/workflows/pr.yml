@@ -10,11 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: lycheeverse/lychee-action@v1.5.4
-      - uses: peter-evans/create-or-update-comment@v1
+      - name: Comment Broken Links
+        uses: marocchino/sticky-pull-request-comment@v2
         with:
-          issue-number: ${{ github.event.pull_request.number }}
-          body: |
-            :wave: Hi @${{ github.event.pull_request.user.login }}! :wave:
-            Thanks for your pull request. I've run [lychee](https://github.com/lycheeverse/lychee)
-            on the repository and it reported some broken links.
-            ${LYCHEE_OUTPUT}
+          path: lychee/out.md
