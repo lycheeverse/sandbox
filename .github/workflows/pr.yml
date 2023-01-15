@@ -11,7 +11,7 @@ jobs:
         - uses: actions/checkout@v2
         - uses: lycheeverse/lychee-action@v1
         - uses: peter-evans/create-or-update-comment@v1.5.4
-            with:
+          with:
             issue-number: ${{ github.event.pull_request.number }}
             body: |
                 :wave: Hi @${{ github.event.pull_request.user.login }}! :wave:
